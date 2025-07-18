@@ -5,6 +5,8 @@
 
 ## 📸 Náhled
 
+![screenshot_engeto_project_1](https://github.com/user-attachments/assets/1293a311-7cf1-4be0-b7f8-6a0c1a276a98)
+
 ## 🚀 Funkce
 
 - Responzivní design (mobilní i desktopová zařízení)
