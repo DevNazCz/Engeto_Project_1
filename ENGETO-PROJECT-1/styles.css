@@ -1,0 +1,424 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family: "Roboto", sans-serif;
+
+  --bg-color-nav: #3a2e2f;
+  --bg-color-base: #33292a;
+  --bg-color-alternate: #644b4f;
+  --bg-color-trips: #f2f2f2;
+  --bg-color-footer: #333;
+
+  --text-color-black: #000;
+  --color-white: #fff;
+
+  --link-color: #efa69d;
+  --link-hover-color: #e9877b;
+
+  --border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family), sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+a {
+  color: var(--color-white);
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  transform: scale(1.1);
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+  padding: 80px 8px;
+}
+
+.absolute-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header */
+
+.burger-button {
+  display: none;
+  cursor: pointer;
+}
+
+.header-container {
+  background-color: var(--bg-color-nav);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.nav-item {
+  padding: 12px;
+  font-size: clamp(16px, 1.4vw, 20px);
+}
+
+/* Main title section */
+
+.hero-section {
+  background: url(./images/header-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-title-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.main-title {
+  position: absolute;
+  right: 0;
+  bottom: 78px;
+  font-size: clamp(3rem, 6vw, 6rem);
+}
+
+/* About-us-section */
+
+.about-us-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-us-left-block,
+.about-us-img-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.about-us-description {
+  width: 100%;
+  height: auto;
+}
+
+.about-us-title {
+  margin-bottom: 15px;
+}
+
+.about-us-img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
+
+/* What We Do Section */
+
+.what-we-do-section {
+  background-color: var(--bg-color-base);
+  height: auto;
+  min-height: 591px;
+  color: var(--color-white);
+}
+
+.what-we-do-top-block {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.what-we-do-title {
+  margin-bottom: 23px;
+}
+
+.what-we-do-bottom-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.what-we-do-icon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Our trips section */
+
+.our-trips-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.our-trips-item img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--border-radius);
+}
+
+.our-trips-title-block {
+  background-color: var(--bg-color-trips);
+  border-radius: var(--border-radius);
+}
+
+.our-trips-title {
+  padding: 26px;
+  color: var(--text-color-black);
+}
+
+/* Where to go section */
+
+.where-to-go-section {
+  height: auto;
+  min-height: 400px;
+  background-color: var(--bg-color-alternate);
+  color: var(--color-white);
+}
+
+.where-to-go-wrapper {
+  display: flex;
+}
+
+.where-to-go-title {
+  flex: 1 0 270px;
+}
+
+.where-to-go-description {
+  margin-bottom: 20px;
+}
+
+.contact-us-button {
+  font-weight: bold;
+  color: var(--text-color-black);
+  padding: 12px 20px;
+  margin-top: 44px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+.contact-us-button:hover {
+  transform: scale(1.1);
+  background-color: var(--bg-color-trips);
+  cursor: pointer;
+}
+
+/* Reviews section*/
+
+.reviews-description {
+  text-align: center;
+  max-width: 330px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+}
+
+.reviews-description h2 {
+  margin-bottom: 26px;
+}
+
+.our-reviews-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  max-width: 378px;
+}
+
+.review p {
+  text-align: center;
+}
+
+.review img {
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+/* Gallery */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery img {
+  display: block;
+  height: 100%;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--bg-color-footer);
+}
+
+.footer {
+  text-align: center;
+  color: var(--color-white);
+}
+
+.footer a {
+  color: var(--link-color);
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: var(--link-hover-color);
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    width: 80%;
+    padding: 50px 0;
+  }
+  /* Header */
+  .nav-item {
+    display: none;
+  }
+
+  .header-container {
+    height: 65px;
+  }
+
+  .burger-button {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 85%;
+    padding: 45px 0;
+  }
+
+  /* About us section */
+
+  .about-us-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .about-us-left-block,
+  .about-us-img-container {
+    max-width: none;
+  }
+
+  /* What We Do Section */
+
+  .what-we-do-top-block {
+    margin-bottom: 50px;
+  }
+
+  .what-we-do-bottom-block {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .what-we-do-icon-container {
+    gap: 10px;
+  }
+
+  /* Our trips section */
+
+  .our-trips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* Where to go section */
+
+  .where-to-go-wrapper {
+    flex-direction: column;
+  }
+
+  .where-to-go-title {
+    flex: 1 0 100px;
+  }
+
+  /* Reviews */
+
+  .our-reviews-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Gallery */
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
