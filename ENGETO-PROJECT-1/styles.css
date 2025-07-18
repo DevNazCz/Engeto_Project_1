@@ -322,6 +322,7 @@ footer {
 .footer {
   text-align: center;
   color: var(--color-white);
+  padding: 30px;
 }
 
 .footer a {
